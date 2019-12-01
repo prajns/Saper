@@ -4,7 +4,8 @@ const saperController = (function () {
         tab: [],
         gridHeight: 9,
         gridWidth: 9,
-        bombsNumber: 10
+        bombsNumber: 10,
+        start: false
     };
 
     const classNames = {
@@ -216,7 +217,18 @@ const saperController = (function () {
         if (data.gridWidth <= data.gridHeight) {
             xx = data.gridWidth;
             yy = data.gridHeight;
-                
+
+            //LEFT-TOP
+            if (x - 1 >= 0 && x - 1 < xx && y - 1 >= 0 && y - 1 < yy) {
+                let temp = data.tab[x - 1][y - 1].innerHTML;
+        
+                if ( temp > 0 && data.tab[x - 1][y - 1].className == classNames.fEmpty ) {
+                    data.tab[x - 1][y - 1].className = classNames.fClear;
+                    data.tab[x - 1][y - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x - 1][y - 1].style.fontSize = parseInt(data.tab[x - 1][y - 1].style.height) * 0.75 + "px";
+                }                
+            }            
+
             //TOP
             if (x >= 0 && x < xx && y - 1 >= 0 && y - 1 < yy) {
                 let temp = data.tab[x][y - 1].innerHTML;
@@ -226,6 +238,7 @@ const saperController = (function () {
                     data.tab[x][y - 1].setAttribute('data-hint', temp);
 
                     data.tab[x][y - 1].className = classNames.fClear;
+                    data.tab[x][y - 1].style.backgroundImage = "URL('dist/field--clear.svg')";
 
                     data.tab[x][y - 1].style.fontSize = 0;
 
@@ -236,6 +249,17 @@ const saperController = (function () {
                     data.tab[x][y - 1].style.fontSize = parseInt(data.tab[x][y - 1].style.height) * 0.75 + "px";
                 }
             }
+
+            //RIGHT-TOP
+            if (x + 1 >= 0 && x + 1 < xx && y - 1 >= 0 && y - 1 < yy) {      
+                let temp = data.tab[x + 1][y - 1].innerHTML;
+        
+                if ( temp > 0 && data.tab[x + 1][y - 1].className == classNames.fEmpty ) {
+                    data.tab[x + 1][y - 1].className = classNames.fClear;
+                    data.tab[x + 1][y - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x + 1][y - 1].style.fontSize = parseInt(data.tab[x + 1][y - 1].style.height) * 0.75 + "px";
+                }   
+            }            
         
             //LEFT
             if (x - 1 >= 0 && x - 1 < xx && y >= 0 && y < yy) {
@@ -246,6 +270,7 @@ const saperController = (function () {
                     data.tab[x - 1][y].setAttribute('data-hint', temp);
 
                     data.tab[x - 1][y].className = classNames.fClear;
+                    data.tab[x - 1][y].style.backgroundImage = "URL('dist/field--clear.svg')";
 
                     data.tab[x - 1][y].style.fontSize = 0;
 
@@ -266,6 +291,7 @@ const saperController = (function () {
                     data.tab[x + 1][y].setAttribute('data-hint', temp);
 
                     data.tab[x + 1][y].className = classNames.fClear;
+                    data.tab[x + 1][y].style.backgroundImage = "URL('dist/field--clear.svg')";
 
                     data.tab[x + 1][y].style.fontSize = 0;
 
@@ -276,6 +302,17 @@ const saperController = (function () {
                     data.tab[x + 1][y].style.fontSize = parseInt(data.tab[x + 1][y].style.height) * 0.75 + "px";
                 }
             }
+
+            //LEFT-BOTTOM
+            if (x - 1 >= 0 && x - 1 < xx && y + 1 >= 0 && y + 1 < yy) {
+                let temp = data.tab[x - 1][y + 1].innerHTML;
+        
+                if ( temp > 0 && data.tab[x - 1][y + 1].className == classNames.fEmpty ) {
+                    data.tab[x - 1][y + 1].className = classNames.fClear;
+                    data.tab[x - 1][y + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x - 1][y + 1].style.fontSize = parseInt(data.tab[x - 1][y + 1].style.height) * 0.75 + "px";
+                }  				
+            }            
                 
             //BOTTOM
             if (x >= 0 && x < xx && y + 1 >= 0  && y + 1 < yy) {
@@ -286,6 +323,7 @@ const saperController = (function () {
                     data.tab[x][y + 1].setAttribute('data-hint', temp);
 
                     data.tab[x][y + 1].className = classNames.fClear;
+                    data.tab[x][y + 1].style.backgroundImage = "URL('dist/field--clear.svg')";
 
                     data.tab[x][y + 1].style.fontSize = 0;
 
@@ -296,7 +334,17 @@ const saperController = (function () {
                     data.tab[x][y + 1].style.fontSize = parseInt(data.tab[x][y + 1].style.height) * 0.75 + "px";
                 }
             }
+
+            //RIGHT-BOTTOM
+            if (x + 1 >= 0 && x + 1 < xx && y + 1 >= 0 && y + 1 < yy) {
+                let temp = data.tab[x + 1][y + 1].innerHTML;
         
+                if ( temp > 0 && data.tab[x + 1][y + 1].className == classNames.fEmpty ) {
+                    data.tab[x + 1][y + 1].className = classNames.fClear;
+                    data.tab[x + 1][y + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x + 1][y + 1].style.fontSize = parseInt(data.tab[x + 1][y + 1].style.height) * 0.75 + "px";
+                }  
+            }  
         } else {
             xx = data.gridHeight;
             yy = data.gridWidth;
@@ -305,7 +353,18 @@ const saperController = (function () {
             tmp = y;
             y = x;
             x = tmp;
-              
+            
+            //LEFT-TOP
+            if (x - 1 >= 0 && x - 1 < yy && y - 1 >= 0 && y - 1 < xx) {
+                let temp = data.tab[y - 1][x - 1].innerHTML;
+                
+                if ( temp > 0 && data.tab[y - 1][x - 1].className == classNames.fEmpty ) {
+                    data.tab[y - 1][x - 1].className = classNames.fClear;
+                    data.tab[y - 1][x - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y - 1][x - 1].style.fontSize = parseInt(data.tab[y - 1][x - 1].style.height) * 0.75 + "px";
+                }                
+            }  
+
             //TOP
             if (x >= 0 && x < xx && y - 1 >= 0 && y - 1 < yy) {
                 let temp = data.tab[y - 1][x].innerHTML;
@@ -315,6 +374,7 @@ const saperController = (function () {
                     data.tab[y - 1][x].setAttribute('data-hint', temp);
 
                     data.tab[y - 1][x].className = classNames.fClear;
+                    data.tab[y - 1][x].style.backgroundImage = "URL('dist/field--clear.svg')";
 
                     data.tab[y - 1][x].style.fontSize = 0;
 
@@ -326,6 +386,17 @@ const saperController = (function () {
                 }
             }
 
+            //RIGHT-TOP
+            if (x + 1 >= 0 && x + 1 < xx && y - 1 >= 0 && y - 1 < yy) {
+                let temp = data.tab[y - 1][x + 1].innerHTML;
+
+                if ( temp > 0 && data.tab[y - 1][x + 1].className == classNames.fEmpty ) {
+                    data.tab[y - 1][x + 1].className = classNames.fClear;
+                    data.tab[y - 1][x + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y - 1][x + 1].style.fontSize = parseInt(data.tab[y - 1][x + 1].style.height) * 0.75 + "px";
+                }   
+            }             
+
             //LEFT
             if (x - 1 >= 0 && x - 1 < xx && y >= 0 && y < yy) {
                 let temp = data.tab[y][x - 1].innerHTML;
@@ -335,6 +406,7 @@ const saperController = (function () {
                     data.tab[y][x - 1].setAttribute('data-hint', temp);
 
                     data.tab[y][x - 1].className = classNames.fClear;
+                    data.tab[y][x - 1].style.backgroundImage = "URL('dist/field--clear.svg')";
 
                     data.tab[y][x - 1].style.fontSize = 0;
 
@@ -355,6 +427,7 @@ const saperController = (function () {
                     data.tab[y][x + 1].setAttribute('data-hint', temp);
 
                     data.tab[y][x + 1].className = classNames.fClear;
+                    data.tab[y][x + 1].style.backgroundImage = "URL('dist/field--clear.svg')";
 
                     data.tab[y][x + 1].style.fontSize = 0;
                     
@@ -365,7 +438,18 @@ const saperController = (function () {
                     data.tab[y][x + 1].style.fontSize = parseInt(data.tab[y][x + 1].style.height) * 0.75 + "px";
                 }
             }
-                
+
+            //LEFT-BOTTOM
+            if (x - 1 >= 0 && x - 1 < xx && y + 1 >= 0 && y + 1 < yy) {
+                let temp = data.tab[y + 1][x - 1].innerHTML;
+        
+                if ( temp > 0 && data.tab[y + 1][x - 1].className == classNames.fEmpty ) {
+                    data.tab[y + 1][x - 1].className = classNames.fClear;
+                    data.tab[y + 1][x - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y + 1][x - 1].style.fontSize = parseInt(data.tab[y + 1][x - 1].style.height) * 0.75 + "px";
+                }  				
+            }              
+
             //BOTTOM
             if (x >= 0 && x < xx && y + 1 >= 0  && y + 1 < yy) {
                 let temp = data.tab[y + 1][x].innerHTML;
@@ -375,6 +459,7 @@ const saperController = (function () {
                     data.tab[y + 1][x].setAttribute('data-hint', temp);
 
                     data.tab[y + 1][x].className = classNames.fClear;
+                    data.tab[y + 1][x].style.backgroundImage = "URL('dist/field--clear.svg')";
 
                     data.tab[y + 1][x].style.fontSize = 0;
 
@@ -385,6 +470,17 @@ const saperController = (function () {
                     data.tab[y + 1][x].style.fontSize = parseInt(data.tab[y + 1][x].style.height) * 0.75 + "px";
                 }
             }
+
+            //RIGHT-BOTTOM
+            if (x + 1 >= 0 && x + 1 < xx && y + 1 >= 0 && y + 1 < yy) {
+                let temp = data.tab[y + 1][x + 1].innerHTML;
+        
+                if ( temp > 0 && data.tab[y + 1][x + 1].className == classNames.fEmpty ) {
+                    data.tab[y + 1][x + 1].className = classNames.fClear;
+                    data.tab[y + 1][x + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y + 1][x + 1].style.fontSize = parseInt(data.tab[y + 1][x + 1].style.height) * 0.75 + "px";
+                }  
+            }              
         }
     };
 
@@ -455,7 +551,7 @@ const saperController = (function () {
         checkData: function() {
             if (data.gridHeight <= 2 && data.gridHeight >= 99 && data.gridWidth <= 2 && data.gridWidth >= 99) {
                 return -2; //Invalid grid size
-            } else if (data.bombsNumber > data.gridHeight * data.gridWidth) {
+            } else if (data.bombsNumber >= data.gridHeight * data.gridWidth) {
                 return -1; //Too many bombs
             } else {
                 return 0; //OK
@@ -478,8 +574,9 @@ const saperController = (function () {
         clickField: function(e) {
             const field = e.target;
             
-            if(!document.querySelector(".field--bomb")) { //Plant the bombs after first click on field
+            if(!document.querySelector(".field--bomb") && data.start == false) { //Plant the bombs after first click on field
                 plantBombs(field);
+                data.start = true;
             }
 
             if (e.which == 1) { //LEFT CLICK
