@@ -574,7 +574,7 @@ const saperController = (function () {
         clickField: function(e) {
             const field = e.target;
             
-            if(!document.querySelector(".field--bomb") && data.start == false) { //Plant the bombs after first click on field
+            if(!document.querySelector(".field--bomb") && data.start == false && e.which == 1) { //Plant the bombs after first click on field
                 plantBombs(field);
                 data.start = true;
             }
@@ -600,7 +600,7 @@ const saperController = (function () {
                         field.style.fontSize = parseInt(field.style.height) * 0.75 + "px";
                     }
                 }
-            } else if (e.which == 3) { //RIGHT CLICK
+            } else if (e.which == 3 && data.start == true) { //RIGHT CLICK
                 if (field.className == classNames.fBomb) {
                     field.className = classNames.flBomb;
                     field.style.backgroundImage = "URL('dist/field__flag.svg')";	
@@ -618,7 +618,7 @@ const saperController = (function () {
                     field.style.backgroundImage = "URL('dist/field__questionmark.svg')";	
                     data.bombsNumber++;
                 } else if (field.className == classNames.fqBomb) {
-                    field.className = classNames.fEmpty;
+                    field.className = classNames.fBomb;
                     field.style.backgroundImage = "URL('dist/field--empty.svg')";
                 } else if (field.className == classNames.fqEmpty) {
                     field.className = classNames.fEmpty;

@@ -131,7 +131,7 @@ section {
 
 .field--empty, .field--bomb, .field--explosion, .field__flag--empty, .field__questionmark--empty, .field__questionmark--bomb, .field__flag--bomb {
     background-image: URL('dist/field--empty.svg');
-    font-size: 0;
+    font-size: 0
 }
 
 .field--clear {
@@ -145,11 +145,11 @@ div[data-hint="0"] {
 }
 
 div[data-hint="1"] { 
-    color: #2ecc71;
+    color: #16a085;
 }
 
 div[data-hint="2"] { 
-    color: #27ae60;
+    color: #2980b9;
 }
 
 div[data-hint="3"] { 
