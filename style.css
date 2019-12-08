@@ -138,6 +138,7 @@ section {
     color: #2f3640;
     font-weight: 600;
     background-image: URL('dist/field--clear.svg');
+    text-shadow: 2px 2px 8px #000000;
 }
 
 div[data-hint="0"] { 
@@ -145,7 +146,7 @@ div[data-hint="0"] {
 }
 
 div[data-hint="1"] { 
-    color: #16a085;
+    color: #2ecc71;
 }
 
 div[data-hint="2"] { 
@@ -202,4 +203,9 @@ a:visited {
 .link__github:hover,
 .link__github:active {
     color: #fff;
+}
+
+.link__gitlab:hover,
+.link__gitlab:active {
+    color: #d35400;
 }
