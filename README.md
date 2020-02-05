@@ -2,6 +2,9 @@
 
 Saper game written in JavaScript (ES5+) with responsible design and custom CSS
 
+## Live demo
+* **Saper** - [DEMO](https://raw.githack.com/prajns/Saper/master/saper.html)
+
 ## Built With
 
 * JavaScript (ES5+)
