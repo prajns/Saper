@@ -224,7 +224,7 @@ const saperController = (function () {
         
                 if ( temp > 0 && data.tab[x - 1][y - 1].className == classNames.fEmpty ) {
                     data.tab[x - 1][y - 1].className = classNames.fClear;
-                    data.tab[x - 1][y - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x - 1][y - 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[x - 1][y - 1].style.fontSize = parseInt(data.tab[x - 1][y - 1].style.height) * 0.75 + "px";
                 }                
             }            
@@ -238,14 +238,14 @@ const saperController = (function () {
                     data.tab[x][y - 1].setAttribute('data-hint', temp);
 
                     data.tab[x][y - 1].className = classNames.fClear;
-                    data.tab[x][y - 1].style.backgroundImage = "URL('dist/field--clear.svg')";
+                    data.tab[x][y - 1].style.backgroundImage = "URL('assets/field--clear.svg')";
 
                     data.tab[x][y - 1].style.fontSize = 0;
 
                     clearArea(x, y - 1);
                 } else if ( temp > 0 && data.tab[x][y - 1].className == classNames.fEmpty ) {
                     data.tab[x][y - 1].className = classNames.fClear;
-                    data.tab[x][y - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x][y - 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[x][y - 1].style.fontSize = parseInt(data.tab[x][y - 1].style.height) * 0.75 + "px";
                 }
             }
@@ -256,7 +256,7 @@ const saperController = (function () {
         
                 if ( temp > 0 && data.tab[x + 1][y - 1].className == classNames.fEmpty ) {
                     data.tab[x + 1][y - 1].className = classNames.fClear;
-                    data.tab[x + 1][y - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x + 1][y - 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[x + 1][y - 1].style.fontSize = parseInt(data.tab[x + 1][y - 1].style.height) * 0.75 + "px";
                 }   
             }            
@@ -270,14 +270,14 @@ const saperController = (function () {
                     data.tab[x - 1][y].setAttribute('data-hint', temp);
 
                     data.tab[x - 1][y].className = classNames.fClear;
-                    data.tab[x - 1][y].style.backgroundImage = "URL('dist/field--clear.svg')";
+                    data.tab[x - 1][y].style.backgroundImage = "URL('assets/field--clear.svg')";
 
                     data.tab[x - 1][y].style.fontSize = 0;
 
                     clearArea(x - 1, y);
                 } else if ( temp > 0 && data.tab[x - 1][y].className == classNames.fEmpty ) {
                     data.tab[x - 1][y].className = classNames.fClear;
-                    data.tab[x - 1][y].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x - 1][y].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[x - 1][y].style.fontSize = parseInt(data.tab[x - 1][y].style.height) * 0.75 + "px";
                 }
             }
@@ -291,14 +291,14 @@ const saperController = (function () {
                     data.tab[x + 1][y].setAttribute('data-hint', temp);
 
                     data.tab[x + 1][y].className = classNames.fClear;
-                    data.tab[x + 1][y].style.backgroundImage = "URL('dist/field--clear.svg')";
+                    data.tab[x + 1][y].style.backgroundImage = "URL('assets/field--clear.svg')";
 
                     data.tab[x + 1][y].style.fontSize = 0;
 
                     clearArea(x + 1, y);
                 } else if ( temp > 0 && data.tab[x + 1][y].className == classNames.fEmpty ) {
                     data.tab[x + 1][y].className = classNames.fClear;
-                    data.tab[x + 1][y].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x + 1][y].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[x + 1][y].style.fontSize = parseInt(data.tab[x + 1][y].style.height) * 0.75 + "px";
                 }
             }
@@ -309,7 +309,7 @@ const saperController = (function () {
         
                 if ( temp > 0 && data.tab[x - 1][y + 1].className == classNames.fEmpty ) {
                     data.tab[x - 1][y + 1].className = classNames.fClear;
-                    data.tab[x - 1][y + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x - 1][y + 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[x - 1][y + 1].style.fontSize = parseInt(data.tab[x - 1][y + 1].style.height) * 0.75 + "px";
                 }  				
             }            
@@ -323,14 +323,14 @@ const saperController = (function () {
                     data.tab[x][y + 1].setAttribute('data-hint', temp);
 
                     data.tab[x][y + 1].className = classNames.fClear;
-                    data.tab[x][y + 1].style.backgroundImage = "URL('dist/field--clear.svg')";
+                    data.tab[x][y + 1].style.backgroundImage = "URL('assets/field--clear.svg')";
 
                     data.tab[x][y + 1].style.fontSize = 0;
 
                     clearArea(x, y + 1);
                 } else if ( temp > 0 && data.tab[x][y + 1].className == classNames.fEmpty ) {
                     data.tab[x][y + 1].className = classNames.fClear;
-                    data.tab[x][y + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x][y + 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[x][y + 1].style.fontSize = parseInt(data.tab[x][y + 1].style.height) * 0.75 + "px";
                 }
             }
@@ -341,7 +341,7 @@ const saperController = (function () {
         
                 if ( temp > 0 && data.tab[x + 1][y + 1].className == classNames.fEmpty ) {
                     data.tab[x + 1][y + 1].className = classNames.fClear;
-                    data.tab[x + 1][y + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[x + 1][y + 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[x + 1][y + 1].style.fontSize = parseInt(data.tab[x + 1][y + 1].style.height) * 0.75 + "px";
                 }  
             }  
@@ -360,7 +360,7 @@ const saperController = (function () {
                 
                 if ( temp > 0 && data.tab[y - 1][x - 1].className == classNames.fEmpty ) {
                     data.tab[y - 1][x - 1].className = classNames.fClear;
-                    data.tab[y - 1][x - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y - 1][x - 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[y - 1][x - 1].style.fontSize = parseInt(data.tab[y - 1][x - 1].style.height) * 0.75 + "px";
                 }                
             }  
@@ -374,14 +374,14 @@ const saperController = (function () {
                     data.tab[y - 1][x].setAttribute('data-hint', temp);
 
                     data.tab[y - 1][x].className = classNames.fClear;
-                    data.tab[y - 1][x].style.backgroundImage = "URL('dist/field--clear.svg')";
+                    data.tab[y - 1][x].style.backgroundImage = "URL('assets/field--clear.svg')";
 
                     data.tab[y - 1][x].style.fontSize = 0;
 
                     clearArea(y - 1, x);
                 } else if ( temp > 0 && data.tab[y - 1][x].className == classNames.fEmpty ) {
                     data.tab[y - 1][x].className = classNames.fClear;
-                    data.tab[y - 1][x].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y - 1][x].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[y - 1][x].style.fontSize = parseInt(data.tab[y - 1][x].style.height) * 0.75 + "px";
                 }
             }
@@ -392,7 +392,7 @@ const saperController = (function () {
 
                 if ( temp > 0 && data.tab[y - 1][x + 1].className == classNames.fEmpty ) {
                     data.tab[y - 1][x + 1].className = classNames.fClear;
-                    data.tab[y - 1][x + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y - 1][x + 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[y - 1][x + 1].style.fontSize = parseInt(data.tab[y - 1][x + 1].style.height) * 0.75 + "px";
                 }   
             }             
@@ -406,14 +406,14 @@ const saperController = (function () {
                     data.tab[y][x - 1].setAttribute('data-hint', temp);
 
                     data.tab[y][x - 1].className = classNames.fClear;
-                    data.tab[y][x - 1].style.backgroundImage = "URL('dist/field--clear.svg')";
+                    data.tab[y][x - 1].style.backgroundImage = "URL('assets/field--clear.svg')";
 
                     data.tab[y][x - 1].style.fontSize = 0;
 
                     clearArea(y, x - 1);
                 } else if ( temp > 0 && data.tab[y][x - 1].className == classNames.fEmpty ) {
                     data.tab[y][x - 1].className = classNames.fClear;
-                    data.tab[y][x - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y][x - 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[y][x - 1].style.fontSize = parseInt(data.tab[y][x - 1].style.height) * 0.75 + "px";
                 }
             }
@@ -427,14 +427,14 @@ const saperController = (function () {
                     data.tab[y][x + 1].setAttribute('data-hint', temp);
 
                     data.tab[y][x + 1].className = classNames.fClear;
-                    data.tab[y][x + 1].style.backgroundImage = "URL('dist/field--clear.svg')";
+                    data.tab[y][x + 1].style.backgroundImage = "URL('assets/field--clear.svg')";
 
                     data.tab[y][x + 1].style.fontSize = 0;
                     
                     clearArea(y, x + 1);
                 } else if ( temp > 0 && data.tab[y][x + 1].className == classNames.fEmpty ) {
                     data.tab[y][x + 1].className = classNames.fClear;
-                    data.tab[y][x + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y][x + 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[y][x + 1].style.fontSize = parseInt(data.tab[y][x + 1].style.height) * 0.75 + "px";
                 }
             }
@@ -445,7 +445,7 @@ const saperController = (function () {
         
                 if ( temp > 0 && data.tab[y + 1][x - 1].className == classNames.fEmpty ) {
                     data.tab[y + 1][x - 1].className = classNames.fClear;
-                    data.tab[y + 1][x - 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y + 1][x - 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[y + 1][x - 1].style.fontSize = parseInt(data.tab[y + 1][x - 1].style.height) * 0.75 + "px";
                 }  				
             }              
@@ -459,14 +459,14 @@ const saperController = (function () {
                     data.tab[y + 1][x].setAttribute('data-hint', temp);
 
                     data.tab[y + 1][x].className = classNames.fClear;
-                    data.tab[y + 1][x].style.backgroundImage = "URL('dist/field--clear.svg')";
+                    data.tab[y + 1][x].style.backgroundImage = "URL('assets/field--clear.svg')";
 
                     data.tab[y + 1][x].style.fontSize = 0;
 
                     clearArea(y + 1, x);
                 } else if ( temp > 0 && data.tab[y + 1][x].className == classNames.fEmpty ) {
                     data.tab[y + 1][x].className = classNames.fClear;
-                    data.tab[y + 1][x].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y + 1][x].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[y + 1][x].style.fontSize = parseInt(data.tab[y + 1][x].style.height) * 0.75 + "px";
                 }
             }
@@ -477,7 +477,7 @@ const saperController = (function () {
         
                 if ( temp > 0 && data.tab[y + 1][x + 1].className == classNames.fEmpty ) {
                     data.tab[y + 1][x + 1].className = classNames.fClear;
-                    data.tab[y + 1][x + 1].style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                    data.tab[y + 1][x + 1].style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                     data.tab[y + 1][x + 1].style.fontSize = parseInt(data.tab[y + 1][x + 1].style.height) * 0.75 + "px";
                 }  
             }              
@@ -522,14 +522,14 @@ const saperController = (function () {
             for (let j = 0 ; j < data.gridHeight ; j++) {
                 //Game ended as loss
                 if(data.tab[i][j].className == classNames.fBomb && result == false) {
-                    data.tab[i][j].style.backgroundImage = "URL('dist/field__bomb.svg')";
+                    data.tab[i][j].style.backgroundImage = "URL('assets/field__bomb.svg')";
                 }else if(data.tab[i][j].className == classNames.fBoom && result == false) {
-                    data.tab[i][j].style.backgroundImage = "URL('dist/field__bomb--explosion.svg')";
+                    data.tab[i][j].style.backgroundImage = "URL('assets/field__bomb--explosion.svg')";
                 }
 
                 //Game ended as win
                 if(data.tab[i][j].innerHTML == -1 && result == true) {
-                    data.tab[i][j].style.backgroundImage = "URL('dist/field__bomb--defused.svg')";
+                    data.tab[i][j].style.backgroundImage = "URL('assets/field__bomb--defused.svg')";
                 }
             }
         }	
@@ -596,33 +596,33 @@ const saperController = (function () {
                     }
 
                     if (field.innerHTML > 0) {
-                        field.style.backgroundImage = "URL('dist/field--empty--dark.svg')";
+                        field.style.backgroundImage = "URL('assets/field--empty--dark.svg')";
                         field.style.fontSize = parseInt(field.style.height) * 0.75 + "px";
                     }
                 }
             } else if (e.which == 3 && data.start == true) { //RIGHT CLICK
                 if (field.className == classNames.fBomb) {
                     field.className = classNames.flBomb;
-                    field.style.backgroundImage = "URL('dist/field__flag.svg')";	
+                    field.style.backgroundImage = "URL('assets/field__flag.svg')";	
                     data.bombsNumber--;
                 } else if (field.className == classNames.fEmpty) {
                     field.className = classNames.flEmpty;
-                    field.style.backgroundImage = "URL('dist/field__flag.svg')";
+                    field.style.backgroundImage = "URL('assets/field__flag.svg')";
                     data.bombsNumber--;
                 } else if (field.className == classNames.flBomb) {
                     field.className = classNames.fqBomb;
-                    field.style.backgroundImage = "URL('dist/field__questionmark.svg')";	
+                    field.style.backgroundImage = "URL('assets/field__questionmark.svg')";	
                     data.bombsNumber++;
                 } else if (field.className == classNames.flEmpty) {
                     field.className = classNames.fqEmpty;
-                    field.style.backgroundImage = "URL('dist/field__questionmark.svg')";	
+                    field.style.backgroundImage = "URL('assets/field__questionmark.svg')";	
                     data.bombsNumber++;
                 } else if (field.className == classNames.fqBomb) {
                     field.className = classNames.fBomb;
-                    field.style.backgroundImage = "URL('dist/field--empty.svg')";
+                    field.style.backgroundImage = "URL('assets/field--empty.svg')";
                 } else if (field.className == classNames.fqEmpty) {
                     field.className = classNames.fEmpty;
-                    field.style.backgroundImage = "URL('dist/field--empty.svg')";
+                    field.style.backgroundImage = "URL('assets/field--empty.svg')";
                 }
             }
             
